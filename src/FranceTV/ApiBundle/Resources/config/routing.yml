@@ -1,0 +1,3 @@
+resource.article:
+    resource: FranceTV\ApiBundle\Controller\ArticleController
+    type: rest

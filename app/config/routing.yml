@@ -1,3 +1,9 @@
-app:
-    resource: "@AppBundle/Controller/"
+france_tv_api:
+    resource: "@FranceTVApiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+frtv_api_doc:
+    resource: "@FranceTVApiBundle/Controller/Doc"
     type:     annotation
+    prefix:   /doc/v1
+
