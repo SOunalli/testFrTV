@@ -60,13 +60,12 @@ class ApiExceptionListener
 
         $isDevEnv = substr($event->getRequest()->getBaseUrl(), 0, strlen('/app_dev.php')) == '/app_dev.php' ;
 
-//        if (!$isDevEnv) {
-//            $message = 'An error was occurred!';
-//        } else {
-//            $message = $exception->getMessage();
-//        }
+        if (!$isDevEnv) {
+            $message = 'An error was occurred!';
+        } else {
+            $message = $exception->getMessage();
+        }
 
-        $message = $exception->getMessage();
         $error = [
             'message' => ["type" => "E", "text" => $this->translator->trans($message)],
         ];
